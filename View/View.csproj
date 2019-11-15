@@ -4,6 +4,7 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
 	<RootNamespace>TabletopTools.GMScreen.View</RootNamespace>
     <UseWPF>true</UseWPF>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
