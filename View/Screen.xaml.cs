@@ -20,6 +20,21 @@ namespace TabletopTools.GMScreen.View
         public Screen()
         {
             InitializeComponent();
+
+            DataContext = new ViewModel.ScreenModel();
+        }
+
+        protected void Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void miAbout_Click(object sender, EventArgs e)
+        {
+            // psuedocode
+            //about = new About();
+            //about.ShowDialog();
+            MessageBox.Show("Not implemented");
         }
     }
 }

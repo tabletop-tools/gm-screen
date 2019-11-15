@@ -3,10 +3,33 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:TabletopTools.GMScreen.View"
+        xmlns:vm="clr-namspace:TabletopTools.GMScreen.ViewModel;assembly=viewmodel"
         mc:Ignorable="d"
         Title="Screen" Height="450" Width="800">
+    
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="22"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="22"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Menu IsMainMenu="True" Grid.Row="0">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Exit" Click="Exit_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="_About" Click="miAbout_Click" />
+            </MenuItem>
+        </Menu>
+
+        <StatusBar Grid.Row="2">
+            <StatusBarItem>
+                <TextBlock />
+            </StatusBarItem>
+        </StatusBar>
     </Grid>
 </Window>
